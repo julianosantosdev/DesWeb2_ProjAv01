@@ -14,7 +14,7 @@
     <main>
         <section>
             <div>
-                <h2>Olá, <?php print_r ($_SESSION["user"]); ?></h2>
+                <h2>Olá, <?php echo (ucfirst(($_SESSION["user"]))); ?></h2>
             </div>
             
             <div>
@@ -23,6 +23,7 @@
                 <?php endif; ?>
                 <a href="recordsTechsView">VER SOLICITAÇÕES POR CURSO</a>
                 <a href="labRecords">VER TODAS SOLICITAÇÕES</a>
+                <a href="logout.php">LOGOUT</a>
             </div>
         </section>
     </main>

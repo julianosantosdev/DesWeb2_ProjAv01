@@ -14,20 +14,20 @@
     <main class="">
         <section class="loginBox container">
             <h2>LOGIN</h2>
-            <form action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]) ;?>" method="POST">
-                <div class="inputArea">
+            <form action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>" method="POST">
+                <fieldset class="inputArea">
                     <label for="user">Usuário</label>
                     <input type="text" placeholder="Insira seu usuário" id="user" name="user">
-                </div>
+                </fieldset>
 
-                <div class="inputArea">
+                <fieldset class="inputArea">
                     <label for="user">Senha</label>
                     <input type="text" placeholder="Insira sua senha" id="password" name="password">
-                </div>
+                </fieldset>
 
-                <div>
-                    <input type="submit" id="submitFormButton">
-                </div>
+                <fieldset>
+                    <input type="submit" id="submitFormButton" value="Entrar">
+                </fieldset>
             </form>
             <a href="labRecords.php" id="checkRecordsButton">VER SOLICITAÇÕES</a>
         </section>
