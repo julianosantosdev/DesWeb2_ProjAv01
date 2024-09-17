@@ -10,4 +10,4 @@
 ![Screenshot 2024-09-17 154515](https://github.com/user-attachments/assets/d17f5450-8163-48b3-8820-1ca5739f3083)
 
 ## CONSULTA DE REGISTROS POR CURSO
-![Screenshot 2024-09-17 154614](https://github.com/user-attachments/assets/1dc0fee4-0bb3-4697-8022-432fe11a35fe)
+![Screenshot 2024-09-17 154626](https://github.com/user-attachments/assets/1568d083-05c9-4909-ad23-7ce808bec651)
