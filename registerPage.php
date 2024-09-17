@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/register.css">
     <title>DASHBOARD</title>
 </head>
@@ -49,10 +50,10 @@
                         </select>
                     </fieldset>
                     <fieldset>
-                        <input type="submit" value="REGISTRAR SOLICITAÇÃO">
+                        <input type="submit" class="submitButton" value="REGISTRAR SOLICITAÇÃO">
                     </fieldset>
                 </form>
-                <a href="dashboard.php">Dashboard</a>
+                <a href="dashboard.php">Voltar</a>
         </section>
     </main>
 </body>

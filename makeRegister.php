@@ -32,7 +32,7 @@
     fwrite($handle, $lab . " | " . $date . " | " . $description . "\n");
     fflush($handle);
     fclose($handle);
-    echo '<script>alert("Solicitação Registrada. Você já pode fechar janela.");</script>';
+    echo '<script>alert("Solicitação Registrada!");</script>';
 ?>
 
 <!DOCTYPE html>
@@ -40,10 +40,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmação de Solicitação</title>
+    <title>Solicitaçao Registrada!</title>
 </head>
 <body>
-    <h1>Solicitação Enviada</h1>
-    <a href="registerPage.php">Retornar</a>
+    <h1>Solicitação Recebida</h1>
+    <a href="registerPage.php">Retornar para tela de Registro</a>
 </body>
 </html>
