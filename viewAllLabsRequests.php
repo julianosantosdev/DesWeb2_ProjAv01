@@ -14,23 +14,33 @@
         <ul>
           <?php
             echo ('<h2>Solicitações dos Laboratórios de DSM</h2>');
-            $dsm = fopen("DSM.txt", "r");
-            while (!feof($dsm)) {
-              $line = '<li>' . fgets($dsm) . '</li>';
+            if (!file_exists("DSM.txt")) {
+              $line = '<li>' . 'Sem registros para DSM' . '</li>';
               echo $line;
+            } else {
+              $dsm = fopen("DSM.txt", "r");
+              while (!feof($dsm)) {
+                $line = '<li>' . fgets($dsm) . '</li>';
+                echo $line;
+              }
+              fclose($dsm);
             }
-            fclose($dsm);
           ?>
         </ul>
         <ul>
           <?php
             echo ('<h2>Solicitações dos Laboratórios de GE</h2>');
-            $dsm = fopen("GE.txt", "r");
-            while (!feof($dsm)) {
-              $line = '<li>' . fgets($dsm) . '</li>';
+            if (!file_exists("GE.txt")) {
+              $line = '<li>' . 'Sem registros para GE' . '</li>';
               echo $line;
+            } else {
+              $ge = fopen("GE.txt", "r");
+              while (!feof($ge)) {
+                $line = '<li>' . fgets($ge) . '</li>';
+                echo $line;
+              }
+              fclose($ge);
             }
-            fclose($dsm);
           ?>   
         </ul>
         </ul>

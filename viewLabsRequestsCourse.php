@@ -1,15 +1,5 @@
 <?php
   require("checkSession.php");
-
-  if($_SERVER["REQUEST_METHOD"] == "GET") {
-    if ($_GET["selectedCourse"] == "GE") {
-      $handle = fopen("GE.txt", "r");
-    }
-
-    if ($_GET["selectedCourse"] == "DSM") {
-      $handle = fopen("DSM.txt", "r");
-    }
-   }
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +16,7 @@
     <main>
       <section>
         <a href="dashboard.php">Voltar</a>
-        <form acttion="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>" method="GET">
+        <form acttion="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>" method="POST">
           <label for="course">Curso: </label>
           <select name="selectedCourse" id="course">
             <option default value="">Selecione o Curso</option>
@@ -38,13 +28,20 @@
 
         <section>
           <ul>
-            <?php if ($_GET["selectedCourse"]):
-              echo ('<h2>Solicitações dos Laboratórios de ' . $_GET["selectedCourse"] . '</h2>');
-              while (!feof($handle)) {
-                $line = '<li>' . fgets($handle) . '</li>';
+          <?php if($_SERVER["REQUEST_METHOD"] == "POST"):
+              if (isset($_POST["selectedCourse"]) && $_POST["selectedCourse"] != "" && file_exists($_POST["selectedCourse"] . '.txt')) {
+                echo ('<h2>Solicitações dos Laboratórios de ' . $_POST["selectedCourse"] . '</h2>');
+                $handle = fopen($_POST["selectedCourse"] . '.txt', "r");
+                while (!feof($handle)) {
+                  $line = '<li>' . fgets($handle) . '</li>';
+                  echo $line;
+                }
+                fclose($handle); 
+              } else {
+                $line = '<li>' . 'Sem registros' . '</li>';
                 echo $line;
               }
-              fclose($handle);?>   
+              ?>
             <?php endif; ?>
           </ul>
         </section>
