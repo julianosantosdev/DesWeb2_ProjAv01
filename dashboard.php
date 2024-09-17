@@ -1,5 +1,5 @@
 <?php
-    //require("checkPrivileges.php");
+    require("checkSession.php");
 ?>
 
 <!DOCTYPE html>
@@ -7,53 +7,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="register.css">
     <title>DASHBOARD</title>
 </head>
 <body>
     <main>
-        <section class="container">
+        <section>
             <div>
-                <h1>SOLICITAÇÕES DOS LABORATÓRIOS DE INFORMÁTICA</h1>
+                <h2>Olá, <?php print_r ($_SESSION["user"]); ?></h2>
             </div>
-                <form action="">
-                    <fieldset>
-                        <label for="lab">Laboratorio</label>
-                        <select default="Lista de Laboratorios" id="lab">
-                            <option selected default hidden>Lista de laboratórios</option>
-                            <option value="Lab1">Laboratório 01</option>
-                            <option value="Lab2">Laboratório 02</option>
-                            <option value="Lab3">Laboratório 03</option>
-                        </select>
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="date">Data</label>
-                        <input type="date" id="data">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="description">Descrição</label>
-                        <input type="text" id="description">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="course">Curso Atendido</label>
-                        <select id="course">
-                            <option selected default hidden>Selecione o Curso</option>
-                            <option value="DSM">DSM</option>
-                            <option value="GE">GE</option>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <input type="submit" value="REGISTRAR SOLICITAÇÃO">
-                    </fieldset>
-                </form>
+            
+            <div>
+                <?php if ($_SESSION["user"] == "coordenacao"):?>
+                    <a href="registerPage.php">REGISTRAR SOLICITAÇÃO</a>
+                <?php endif; ?>
+                <a href="recordsTechsView">VER SOLICITAÇÕES POR CURSO</a>
+                <a href="labRecords">VER TODAS SOLICITAÇÕES</a>
+            </div>
         </section>
-        
     </main>
-
-    
     
 </body>
 </html>
