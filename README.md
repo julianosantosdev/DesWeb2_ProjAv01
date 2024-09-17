@@ -5,7 +5,7 @@ A relação de solicitações é criada em arquivo .txt usando manipulação de 
 
 Somente coordenadores podem registrar solicitações, visualizar todas existente e usar o filtro de solicitações por curso.
 Já técnicos somente podem visualizar todas e filtradas.
-Usuários sem logim podem visualizar todas solicitações, mas nao podem, igualmente, registrar ou visualizar as demandas usando a página de filtros.
+Usuários sem login podem visualizar todas solicitações, mas nao podem registrar ou visualizar as demandas usando a página de filtros.
 
 TECHS Utilizadas:
 - DEBIAN 12;
