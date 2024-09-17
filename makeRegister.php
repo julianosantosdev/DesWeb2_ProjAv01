@@ -34,3 +34,16 @@
     fclose($handle);
     echo '<script>alert("Solicitação Registrada. Você já pode fechar janela.");</script>';
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Solicitação</title>
+</head>
+<body>
+    <h1>Solicitação Enviada</h1>
+    <a href="registerPage.php">Retornar</a>
+</body>
+</html>

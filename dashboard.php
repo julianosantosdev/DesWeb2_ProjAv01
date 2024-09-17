@@ -21,8 +21,8 @@
                 <?php if ($_SESSION["user"] == "coordenacao"):?>
                     <a href="registerPage.php">REGISTRAR SOLICITAÇÃO</a>
                 <?php endif; ?>
-                <a href="recordsTechsView">VER SOLICITAÇÕES POR CURSO</a>
-                <a href="labRecords">VER TODAS SOLICITAÇÕES</a>
+                <a href="viewLabsRequestsCourse.php">VER SOLICITAÇÕES POR CURSO</a>
+                <a href="viewAllLabsRequests.php">VER TODAS SOLICITAÇÕES</a>
                 <a href="logout.php">LOGOUT</a>
             </div>
         </section>

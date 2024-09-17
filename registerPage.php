@@ -19,7 +19,7 @@
             <div>
                 <h1>SOLICITAÇÕES DOS LABORATÓRIOS DE INFORMÁTICA</h1>
             </div>
-                <form action="makeRegister.php" method="post" target="blank" onsubmit="window.open('about:blank','print_popup','width=1000,height=800');">>
+                <form action="makeRegister.php" method="post">
                     <fieldset>
                         <label for="lab">Laboratorio</label>
                         <select default="Lista de Laboratorios" id="lab" name="lab" required="required">
@@ -52,6 +52,7 @@
                         <input type="submit" value="REGISTRAR SOLICITAÇÃO">
                     </fieldset>
                 </form>
+                <a href="dashboard.php">Dashboard</a>
         </section>
     </main>
 </body>
